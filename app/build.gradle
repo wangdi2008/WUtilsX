@@ -1,0 +1,50 @@
+plugins {
+    id 'com.android.library'
+    id 'maven-publish'
+}
+
+group = 'com.github.wangdi2008'   // JitPack 必须是这个格式
+version = '1.0.0'                 // 可选，最终以 Git Tag 为准
+
+android {
+    namespace "com.github.wangdi2008.wutilsx"
+    compileSdkVersion 34
+
+    defaultConfig {
+        minSdkVersion 24
+        targetSdkVersion 34
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+publishing {
+    publications {
+        release(MavenPublication) {
+            afterEvaluate {
+                from components.release
+            }
+            groupId = group
+            artifactId = 'WUtilsX'   // 库的名字，别人依赖用这个
+            version = version
+        }
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    //基础功能的工具类
+    implementation 'com.github.xuexiangjys.XUtil:xutil-core:2.0.0'
+    //附加功能的工具类
+    implementation 'com.github.xuexiangjys.XUtil:xutil-sub:2.0.0'
+}

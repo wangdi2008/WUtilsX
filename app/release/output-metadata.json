@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "cn.sylg.wutils",
+  "variantName": "release",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 1102,
+      "versionName": "1.1.02",
+      "outputFile": "warehouse_1.1.02.apk"
+    }
+  ],
+  "elementType": "File"
+}
