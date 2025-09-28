@@ -1,4 +1,4 @@
-package cn.sylg.wutils;
+package cn.sylg.wutilsx;
 
 
 import static junit.framework.TestCase.assertEquals;
