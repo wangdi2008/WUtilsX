@@ -1,0 +1,150 @@
+<resources>
+    <!-- ================== 登录/注册相关 ================== -->
+    <string name="common_login">Login</string>
+    <string name="common_register">Register</string>
+    <string name="common_switch_login_type">Switch login method</string>
+    <string name="common_pwd_login">Password login</string>
+    <string name="common_code_login">Verification code login</string>
+    <string name="common_forget_pwd">Forgot password</string>
+    <string name="common_pwd_create_success">Password created successfully</string>
+    <string name="common_pwd_create_fail">Failed to create password</string>
+    <string name="common_logout">Logout</string>
+    <string name="common_change_pwd">Change password</string>
+
+    <!-- ================== 用户信息/账号 ================== -->
+    <string name="common_mobile">Mobile</string>
+    <string name="common_email">Email</string>
+    <string name="common_account">Account</string>
+    <string name="common_pwd">Password</string>
+    <string name="common_repwd">Confirm password</string>
+    <string name="common_name">Name</string>
+    <string name="common_company">Company</string>
+    <string name="common_captcha">Captcha</string>
+    <string name="common_username">Username</string>
+    <string name="common_nickname">Nickname</string>
+
+    <!-- ================== 输入提示 ================== -->
+    <string name="common_input_account">Please enter account</string>
+    <string name="common_input_mobile">Please enter mobile number</string>
+    <string name="common_input_email">Please enter email</string>
+    <string name="common_input_mobile_or_email">Please enter mobile number or email</string>
+    <string name="common_input_captcha">Please enter captcha</string>
+    <string name="common_input_pwd">Please enter password</string>
+    <string name="common_input_repwd">Please enter password again</string>
+    <string name="common_repwd_mismatch">Passwords do not match</string>
+    <string name="common_input_name">Please enter name</string>
+    <string name="common_input_company">Please enter company</string>
+    <string name="common_input_not_null">Input cannot be empty</string>
+    <string name="common_input_number">Please enter a number</string>
+    <string name="common_input_int">Please enter an integer</string>
+    <string name="common_max_length">Maximum %s characters allowed</string>
+    <string name="common_invalid_char">Unsupported character: %s</string>
+    <string name="common_number_out_range">Value out of range</string>
+    <string name="common_decimal_out_range">Decimal digits out of range</string>
+
+    <!-- ================== 系统提示/状态 ================== -->
+    <string name="common_tip">Tip</string>
+    <string name="common_last_tip">Already the last one</string>
+    <string name="common_first_tip">Already the first one</string>
+    <string name="common_default">Default</string>
+    <string name="common_state_ok">Elevator is not under maintenance</string>
+    <string name="common_state_err">Elevator is malfunctioning</string>
+    <string name="common_response_err">Data response error</string>
+    <string name="common_not_developed">Feature not yet available</string>
+    <string name="common_dev_ing">Feature in development…</string>
+    <string name="common_check_net">Please check your network</string>
+    <string name="common_success">Success</string>
+    <string name="common_fail">Failure</string>
+    <string name="common_warning">Warning</string>
+    <string name="common_info">Info</string>
+    <string name="common_loading">Loading…</string>
+    <string name="common_empty">Empty</string>
+    <string name="common_unknown">Unknown</string>
+    <string name="common_offline">Offline</string>
+
+    <!-- ================== 操作按钮/行为 ================== -->
+    <string name="common_get">Get</string>
+    <string name="common_back">Back</string>
+    <string name="common_send">Send</string>
+    <string name="common_ok">OK</string>
+    <string name="common_cancel">Cancel</string>
+    <string name="common_next">Next</string>
+    <string name="common_prev">Previous</string>
+    <string name="common_search">Search</string>
+    <string name="common_open">Open</string>
+    <string name="common_close">Close</string>
+    <string name="common_save">Save</string>
+    <string name="common_reset">Reset</string>
+    <string name="common_forward">Forward</string>
+    <string name="common_delete">Delete</string>
+    <string name="common_edit_nick">Remark</string>
+    <string name="common_select_file">Please select a file</string>
+    <string name="common_start">Start</string>
+    <string name="common_stop">Stop</string>
+    <string name="common_pull_more">Pull up to see more</string>
+    <string name="common_edit">Edit</string>
+    <string name="common_submit">Submit</string>
+
+    <!-- ================== 文件操作 ================== -->
+    <string name="common_file_exist">File already exists</string>
+    <string name="common_file_create_success">Created successfully</string>
+    <string name="common_file_create_fail">Failed to create %1$s</string>
+    <string name="common_file_save_success">Saved successfully</string>
+    <string name="common_file_save_fail">Failed to save %1$s</string>
+    <string name="common_file_delete_tip">Are you sure to delete?</string>
+    <string name="common_file_delete_success">Deleted successfully</string>
+    <string name="common_file_delete_fail">Failed to delete</string>
+
+    <!-- ================== 设置/版本 ================== -->
+    <string name="common_set_success">Set successfully</string>
+    <string name="common_set_fail">Failed to set</string>
+    <string name="common_new_version">New version available</string>
+    <string name="common_new_version_content">New version: %1$s\nChangelog:\n%2$s</string>
+    <string name="common_update">Update</string>
+    <string name="common_exit">Exit</string>
+    <string name="common_exit_tip">Press again to exit</string>
+    <string name="common_not_yet">Not yet</string>
+    <string name="common_settings">Settings</string>
+
+    <!-- ================== 下载/上传 ================== -->
+    <string name="common_download_success">Download successful</string>
+    <string name="common_download_fail">Download failed</string>
+    <string name="common_download_progress">Download progress: %s%%</string>
+    <string name="common_current_progress">Current progress: %s%%</string>
+    <string name="common_upload_success">Upload successful</string>
+    <string name="common_upload_fail">Upload failed</string>
+    <string name="common_retry">Retry</string>
+
+    <!-- ================== 验证码 ================== -->
+    <string name="common_captcha_sent">Captcha sent</string>
+    <string name="common_captcha_send_fail">Failed to send captcha</string>
+
+    <!-- ================== 请求/网络 ================== -->
+    <string name="common_request_fail">Request failed: %s</string>
+    <string name="common_request_error">Request error</string>
+    <string name="common_data_null">Returned data is null</string>
+    <string name="common_network_error">Network error</string>
+
+    <!-- ================== 状态/通过 ================== -->
+    <string name="common_pass">Passed</string>
+    <string name="common_no_pass">Not passed</string>
+
+    <!-- ================== 时间/日期 ================== -->
+    <string name="common_year">Year</string>
+    <string name="common_month">Month</string>
+    <string name="common_day">Day</string>
+    <string name="common_hour">Hour</string>
+    <string name="common_minute">Minute</string>
+    <string name="common_second">Second</string>
+    <string name="common_today">Today</string>
+    <string name="common_yesterday">Yesterday</string>
+    <string name="common_tomorrow">Tomorrow</string>
+    <string name="common_now">Now</string>
+
+    <!-- ================== 其它 ================== -->
+    <string name="common_front_service">Communication service</string>
+    <string name="common_more">More</string>
+    <string name="common_none">None</string>
+    <string name="common_timeout">Timeout</string>
+    <string name="common_expired">Expired</string>
+</resources>

@@ -1,0 +1,150 @@
+<resources>
+    <!-- ================== 登录/注册相关 ================== -->
+    <string name="common_login">登录</string>
+    <string name="common_register">注册</string>
+    <string name="common_switch_login_type">切换登录方式</string>
+    <string name="common_pwd_login">密码登录</string>
+    <string name="common_code_login">验证码登录</string>
+    <string name="common_forget_pwd">忘记密码</string>
+    <string name="common_pwd_create_success">创建新密码成功</string>
+    <string name="common_pwd_create_fail">创建新密码失败</string>
+    <string name="common_logout">登出</string>
+    <string name="common_change_pwd">修改密码</string>
+
+    <!-- ================== 用户信息/账号 ================== -->
+    <string name="common_mobile">手机号</string>
+    <string name="common_email">邮箱</string>
+    <string name="common_account">账号</string>
+    <string name="common_pwd">密码</string>
+    <string name="common_repwd">确认密码</string>
+    <string name="common_name">姓名</string>
+    <string name="common_company">公司</string>
+    <string name="common_captcha">验证码</string>
+    <string name="common_username">用户名</string>
+    <string name="common_nickname">昵称</string>
+
+    <!-- ================== 输入提示 ================== -->
+    <string name="common_input_account">请输入账号</string>
+    <string name="common_input_mobile">请输入手机号</string>
+    <string name="common_input_email">请输入邮箱</string>
+    <string name="common_input_mobile_or_email">请输入手机号或邮箱</string>
+    <string name="common_input_captcha">请输入验证码</string>
+    <string name="common_input_pwd">请输入密码</string>
+    <string name="common_input_repwd">请再次输入密码</string>
+    <string name="common_repwd_mismatch">两次密码输入不一致</string>
+    <string name="common_input_name">请输入姓名</string>
+    <string name="common_input_company">请输入公司</string>
+    <string name="common_input_not_null">输入不能为空</string>
+    <string name="common_input_number">请输入数字</string>
+    <string name="common_input_int">请输入整数</string>
+    <string name="common_max_length">最多支持%s个字符</string>
+    <string name="common_invalid_char">不支持字符:%s</string>
+    <string name="common_number_out_range">数值超出范围</string>
+    <string name="common_decimal_out_range">小数位数超出范围</string>
+
+    <!-- ================== 系统提示/状态 ================== -->
+    <string name="common_tip">提示</string>
+    <string name="common_last_tip">已经是最后一个了</string>
+    <string name="common_first_tip">已经是第一个了</string>
+    <string name="common_default">默认值</string>
+    <string name="common_state_ok">电梯处于非检修状态</string>
+    <string name="common_state_err">电梯处于故障状态</string>
+    <string name="common_response_err">数据响应异常</string>
+    <string name="common_not_developed">功能暂未开放</string>
+    <string name="common_dev_ing">功能开发中…</string>
+    <string name="common_check_net">请检查您的网络</string>
+    <string name="common_success">成功</string>
+    <string name="common_fail">失败</string>
+    <string name="common_warning">警告</string>
+    <string name="common_info">信息</string>
+    <string name="common_loading">加载中…</string>
+    <string name="common_empty">空</string>
+    <string name="common_unknown">未知</string>
+    <string name="common_offline">离线</string>
+
+    <!-- ================== 操作按钮/行为 ================== -->
+    <string name="common_get">获取</string>
+    <string name="common_back">返回</string>
+    <string name="common_send">发送</string>
+    <string name="common_ok">确定</string>
+    <string name="common_cancel">取消</string>
+    <string name="common_next">下一步</string>
+    <string name="common_prev">上一步</string>
+    <string name="common_search">搜索</string>
+    <string name="common_open">开启</string>
+    <string name="common_close">关闭</string>
+    <string name="common_save">保存</string>
+    <string name="common_reset">重置</string>
+    <string name="common_forward">转发</string>
+    <string name="common_delete">删除</string>
+    <string name="common_edit_nick">备注</string>
+    <string name="common_select_file">请选择文件</string>
+    <string name="common_start">开始</string>
+    <string name="common_stop">停止</string>
+    <string name="common_pull_more">上划显示更多</string>
+    <string name="common_edit">编辑</string>
+    <string name="common_submit">提交</string>
+
+    <!-- ================== 文件操作 ================== -->
+    <string name="common_file_exist">文件已存在</string>
+    <string name="common_file_create_success">创建成功</string>
+    <string name="common_file_create_fail">创建失败%1$s</string>
+    <string name="common_file_save_success">保存成功</string>
+    <string name="common_file_save_fail">保存失败%1$s</string>
+    <string name="common_file_delete_tip">是否确定删除?</string>
+    <string name="common_file_delete_success">删除成功</string>
+    <string name="common_file_delete_fail">删除失败</string>
+
+    <!-- ================== 设置/版本 ================== -->
+    <string name="common_set_success">设置成功</string>
+    <string name="common_set_fail">设置失败</string>
+    <string name="common_new_version">发现新版本</string>
+    <string name="common_new_version_content">新版本：%1$s\n更新日志：\n%2$s</string>
+    <string name="common_update">更新</string>
+    <string name="common_exit">退出</string>
+    <string name="common_exit_tip">再按一次退出程序</string>
+    <string name="common_not_yet">暂不</string>
+    <string name="common_settings">设置</string>
+
+    <!-- ================== 下载/上传 ================== -->
+    <string name="common_download_success">下载成功</string>
+    <string name="common_download_fail">下载失败</string>
+    <string name="common_download_progress">下载进度:%s%%</string>
+    <string name="common_current_progress">当前进度：%s%%</string>
+    <string name="common_upload_success">上传成功</string>
+    <string name="common_upload_fail">上传失败</string>
+    <string name="common_retry">重试</string>
+
+    <!-- ================== 验证码 ================== -->
+    <string name="common_captcha_sent">验证码已发送</string>
+    <string name="common_captcha_send_fail">验证码发送失败</string>
+
+    <!-- ================== 请求/网络 ================== -->
+    <string name="common_request_fail">请求失败:%s</string>
+    <string name="common_request_error">请求异常</string>
+    <string name="common_data_null">返回数据为空</string>
+    <string name="common_network_error">网络错误</string>
+
+    <!-- ================== 状态/通过 ================== -->
+    <string name="common_pass">通过</string>
+    <string name="common_no_pass">未通过</string>
+
+    <!-- ================== 时间/日期 ================== -->
+    <string name="common_year">年</string>
+    <string name="common_month">月</string>
+    <string name="common_day">日</string>
+    <string name="common_hour">时</string>
+    <string name="common_minute">分</string>
+    <string name="common_second">秒</string>
+    <string name="common_today">今天</string>
+    <string name="common_yesterday">昨天</string>
+    <string name="common_tomorrow">明天</string>
+    <string name="common_now">现在</string>
+
+    <!-- ================== 其它 ================== -->
+    <string name="common_front_service">通信服务</string>
+    <string name="common_more">更多</string>
+    <string name="common_none">无</string>
+    <string name="common_timeout">超时</string>
+    <string name="common_expired">已过期</string>
+</resources>
