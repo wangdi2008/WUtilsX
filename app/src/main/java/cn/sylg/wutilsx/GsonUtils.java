@@ -1,10 +1,13 @@
 package cn.sylg.wutilsx;
 
+import static com.xuexiang.xutil.net.JsonUtil.fromJson;
+
 import android.text.TextUtils;
 import android.util.Log;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonParseException;
 import com.google.gson.JsonParser;
 import com.google.gson.reflect.TypeToken;
 
@@ -12,6 +15,7 @@ import java.io.BufferedReader;
 import java.io.Writer;
 import java.lang.reflect.Type;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -102,4 +106,20 @@ public class GsonUtils {
         }
     }
 
+    /**
+     * 解析Json数组字符串
+     *
+     * @param json     Json字符串
+     * @param classOfT 指定类型对象的Class
+     * @param <T>
+     * @return
+     */
+    public static <T> List<T> fromJsonArray(String json, Class<T> classOfT) {
+        try {
+            return fromJson(json, TypeToken.getParameterized(List.class, classOfT).getType());
+        } catch (JsonParseException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }
