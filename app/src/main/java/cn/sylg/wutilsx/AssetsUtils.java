@@ -1,15 +1,21 @@
 package cn.sylg.wutilsx;
 
+
 import android.content.res.AssetManager;
 import android.util.Log;
 
 import com.xuexiang.xutil.XUtil;
+import com.xuexiang.xutil.file.FileIOUtils;
+import com.xuexiang.xutil.file.FileUtils;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 
 public class AssetsUtils {
@@ -100,6 +106,43 @@ public class AssetsUtils {
      */
     public static String readFileAndReplace(String fileName, String pattern) {
         return readFileInternal(fileName, false, pattern);
+    }
+
+    /**
+     * 从asset复制文件到内存
+     */
+    public static void copyFromAssets(String assetDirName, String outDir) {
+        Log.i(TAG, "从asset复制文件到内存: " + assetDirName + " " + outDir);
+        String[] files;
+        try {
+            files = getAssetManager().list(assetDirName);
+            FileUtils.createOrExistsDir(outDir);
+            for (int i = 0; i < Objects.requireNonNull(files).length; i++) {
+                String fileName = files[i];
+                Log.i(TAG, "子文件: " + fileName);
+                //判断是否为文件夹
+                if (!fileName.contains(".")) {
+                    if (0 == assetDirName.length()) {
+                        copyFromAssets(fileName, outDir + fileName + "/");
+                    } else {
+                        copyFromAssets(assetDirName + "/" + fileName, outDir + fileName + "/");
+                    }
+                    continue;
+                }
+                InputStream in;
+                if (0 != assetDirName.length()) {
+                    in = getAssetManager().open(assetDirName + "/" + fileName);
+                } else {
+                    in = getAssetManager().open(fileName);
+                }
+                File outFile = new File(outDir, fileName);
+                FileIOUtils.writeFileFromIS(outFile.getPath(), in);
+                Log.w(TAG, "copyFromAssets: 文件复制成功 " + assetDirName + " " + outDir);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            Log.w(TAG, "copyFromAssets: 文件复制失败 " + assetDirName + " " + outDir);
+        }
     }
 }
 
