@@ -108,6 +108,7 @@ public class AssetsUtils {
         return readFileInternal(fileName, false, pattern);
     }
 
+
     /**
      * 从asset复制文件到内存
      */
