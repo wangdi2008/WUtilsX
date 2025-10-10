@@ -1,8 +1,11 @@
 package cn.sylg.wutilsx;
 
+import android.text.TextUtils;
 import android.util.Log;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonParser;
 import com.google.gson.reflect.TypeToken;
 
 import java.io.BufferedReader;
@@ -81,6 +84,21 @@ public class GsonUtils {
             System.err.println("JSON 解析为 Map 失败: " + e.getMessage());
             e.printStackTrace();
             return new HashMap<>();
+        }
+    }
+
+    /**
+     * ✅ 格式化（美化）JSON字符串，使其带缩进和换行。
+     * 如果不是标准JSON，将返回原字符串。
+     */
+    public static String formatJson(String json) {
+        if (TextUtils.isEmpty(json)) return "";
+        try {
+            Gson gson = new GsonBuilder().setPrettyPrinting().create();
+            return gson.toJson(JsonParser.parseString(json));
+        } catch (Exception e) {
+            e.printStackTrace();
+            return json; // 保底：不是标准JSON则原样返回
         }
     }
 
