@@ -7,8 +7,11 @@ import android.util.Log;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
 import com.google.gson.JsonParseException;
 import com.google.gson.JsonParser;
+import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
 
 import java.io.BufferedReader;
@@ -23,7 +26,7 @@ import java.util.Map;
  * @Description: Gson工具类
  * @Author: Wang Di
  * @Date: 2025-09-29 10:21
- * @Version: 1.0
+ * @Version: 1.1
  */
 public class GsonUtils {
     private static final String TAG = "GsonUtils";
@@ -85,7 +88,7 @@ public class GsonUtils {
             Type mapType = TypeToken.getParameterized(Map.class, keyClass, valueClass).getType();
             return gson.fromJson(json, mapType);
         } catch (Exception e) {
-            System.err.println("JSON 解析为 Map 失败: " + e.getMessage());
+            Log.e(TAG, "JSON 解析为 Map 失败: " + e.getMessage());
             e.printStackTrace();
             return new HashMap<>();
         }
@@ -111,8 +114,8 @@ public class GsonUtils {
      *
      * @param json     Json字符串
      * @param classOfT 指定类型对象的Class
-     * @param <T>
-     * @return
+     * @param <T>      泛型类型
+     * @return List<T>
      */
     public static <T> List<T> fromJsonArray(String json, Class<T> classOfT) {
         try {
@@ -121,5 +124,71 @@ public class GsonUtils {
             e.printStackTrace();
         }
         return null;
+    }
+
+    // ------------------------------------------------------------------------
+    // 以下为新增 JSON 判断工具方法
+    // ------------------------------------------------------------------------
+
+    /**
+     * 判断字符串是否为 JSON 数组
+     */
+    public static boolean isJSONArray(String str) {
+        if (TextUtils.isEmpty(str)) return false;
+        try {
+            JsonElement element = JsonParser.parseString(str);
+            return element.isJsonArray();
+        } catch (JsonSyntaxException e) {
+            return false;
+        }
+    }
+
+    /**
+     * 判断字符串是否不是 JSON 数组
+     */
+    public static boolean isNotJSONArray(String str) {
+        return !isJSONArray(str);
+    }
+
+    /**
+     * 判断字符串是否为 JSON 对象
+     */
+    public static boolean isJSONObject(String str) {
+        if (TextUtils.isEmpty(str)) return false;
+        try {
+            JsonElement element = JsonParser.parseString(str);
+            return element.isJsonObject();
+        } catch (JsonSyntaxException e) {
+            return false;
+        }
+    }
+
+    /**
+     * 判断字符串是否不是 JSON 对象
+     */
+    public static boolean isNotJSONObject(String str) {
+        return !isJSONObject(str);
+    }
+
+    /**
+     * 判断 JSON 数组中所有元素是否都是 JSON 对象
+     */
+    public static boolean allIsJSONObject(String jsonArrayStr) {
+        if (TextUtils.isEmpty(jsonArrayStr)) return false;
+        try {
+            JsonElement element = JsonParser.parseString(jsonArrayStr);
+            if (!element.isJsonArray()) {
+                return false;
+            }
+            JsonArray array = element.getAsJsonArray();
+            for (JsonElement item : array) {
+                if (!item.isJsonObject()) {
+                    return false;
+                }
+            }
+            return true;
+        } catch (JsonSyntaxException e) {
+            return false;
+        }
     }
 }
