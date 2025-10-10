@@ -105,6 +105,7 @@ public class AssetsUtils {
      * @return 解析后的字符串
      */
     public static String readFileAndReplace(String fileName, String pattern) {
+
         return readFileInternal(fileName, false, pattern);
     }
 
